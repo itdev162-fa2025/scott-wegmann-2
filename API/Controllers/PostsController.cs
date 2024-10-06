@@ -30,6 +30,7 @@ namespace API.Controllers
         /// </summary>
         /// <param name="id">post id</param>
         /// <returns>A single post</returns>
+        [HttpGet("{id}", Name ="GetById")]
         public ActionResult<Post> GetById(Guid id)
         {
           var post = this._context.Posts.Find(id);
